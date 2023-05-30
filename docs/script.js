@@ -2,7 +2,7 @@
 
 console.log("Testing");
 
-fetch('data.json')
+fetch('./shared/data.json')
   .then(response => response.json())
   .then(data => {
     // Data is the parsed JSON object
