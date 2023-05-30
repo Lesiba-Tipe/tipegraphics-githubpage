@@ -3,6 +3,9 @@
 /*
   MOBILE
 */
+body{
+    font-family: 'Century Gothic';
+}
 .notFound{
     display: flex;
     flex-direction: column;
@@ -14,29 +17,57 @@
     /* 
         DESKTOP
     */ 
-   .frame-container{
-
+   .frame{
     padding:30px;
     background-color: #023047;
    }
 
-   .frame{
-
+   .frame-content{
+    height: 550px;
+    padding: 30px;
     background-color: #8ecae6;
    }
-   .home-card-container{
-    display: flex;
-    flex-direction: row;
-    flex: 1 2 2;
-    gap: 15px;
+
+   .frame-about{
     background-color: #fff;
    }
-   .home-card{
-    height: 100px;
-    width: 200px;
-    background-color: rgb(243, 240, 60);
+
+   .home-card-container{
+    display: grid;
+    grid-row: 1;
+    grid-template-columns: 2fr 2fr;
+    height: 500px;
+    background-color: #fff;
    }
 
+
+   #carousel-slide-show{
+    /* width: 50%; */
+    background-color: #023047;
+   }
+
+   .carousel-item{
+
+    width: auto;
+
+   }
+   .carousel-item h1{
+    text-align: center;
+    background-color: brown;
+   }
+   
+   .welcome-note{
+    background-color: #8ecae6;
+   }
+   .overlay{
+    margin-top: 50px;
+    width: 25%;
+    height: 100%;
+    background-color: brown;
+    
+   }
+
+  
 }
 
 
