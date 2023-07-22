@@ -1,3 +1,44 @@
 {
-    "name": "Lesiba Moshweu"
+    "welcomeNote":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud.",
+    "about":
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
+    ,
+    "img":
+    [
+        "1oQOQMn7Ilb7c0dkMZTszTMHLSMl35wLk",
+        "1nLTO_6x00eBFK5XL9-IGiNwMJeZNcnVl",
+        "1rzA7b5IYRf885dni8g5_JZxrxSN84GIb",
+        "1pcOKZqtkDdWvKO5LzlgVJ5e0NjjvbyoI",
+        "1nLTO_6x00eBFK5XL9-IGiNwMJeZNcnVl"
+    ],
+    "contact":{
+        "phone":"+27 72 5864 188",
+        "email":"lesiba.tipe@tipegraphics.co.za",
+        "website": "https://tipegraphics.co.za/"
+    },
+    "socials":{
+        "twitter": "https://twitter.com/tipegraphics",
+        "facebook": "https://www.facebook.com/tipegraphics",
+        "instagram": "https://www.instagram.com/tipegraphics/",
+        "tiktok": "https://www.tiktok.com/@tipegraphics"
+    },
+    "services":{
+        "branddesign":
+        [
+            "logo", "Letterhead","Corprate Identity", "bussiness card",
+            "Email Signature", "Poster/Flyer"
+        ],
+        "Webdesign":
+        [
+            "UX/UI Design", "Web design"
+        ],
+        "weddevelopment":
+        [
+            "Web hosting", "Domain registration", 
+            "Custom web development", "Static Website"
+        ]
+    },
+    "specials": "This include any available special",
+    "promo": "This includes any available promos",
+    "object": "data"
 }
