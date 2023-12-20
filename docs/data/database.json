@@ -1,0 +1,49 @@
+{
+    "quotes":[
+        {
+            "author":"Nelson Mandela",
+            "image":"./assets/quotes/Mandela.jpg",
+            "quote":"But we know too well that our freedom is incomplete without freedom of Palestinians."
+        },
+        {
+            "author":"Serena Williams ",
+            "image":"",
+            "quote":"You have to believe in yourself when no one else does."
+        },
+        {
+            "author":"Mother Teresa",
+            "image":"",
+            "quote":"Spread love everywhere you go. Let no one ever come without leaving happier."
+        },
+        {
+            "author":"Oprah Winfrey",
+            "image":"",
+            "quote":"Failure is a great teacher and, if you are open to it, every mistake has a lesson to offer"
+        },
+        {
+            "author":"Nelson Mandela",
+            "image":"",
+            "quote":"It always seems impossible until it's done."
+        },
+        {
+            "author":"Bob Marley",
+            "image":"",
+            "quote":"Love the life you live. Live the life you lover"
+        },
+        {
+            "author":"Oprah Winfrey",
+            "image":"",
+            "quote":"You define your own life. Don’t let other people write your script."
+        },
+        {
+            "author":"Albert Einstein",
+            "image":"",
+            "quote":"Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning."
+        },
+        {
+            "author":"Albert Einstein",
+            "image":"",
+            "quote":"The only source of knowledge is experience."
+        }
+    ]
+}

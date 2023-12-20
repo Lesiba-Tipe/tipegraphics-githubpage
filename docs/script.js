@@ -9,8 +9,7 @@ const frm_submit = document.getElementById('frm_submit_request');
 frm_submit.action = 'https://express-server-dmq0.onrender.com/send-review';
 
 //QUOTE
-const quote_img = document.getElementById('quote_img');
-const quote_txt = document.getElementById('quote_txt');
+
 
 const primary_nav = document.querySelector(".primary-navigation");
 const mobile_nav_toogle = document.querySelector(".mobile-nav-toogle");
