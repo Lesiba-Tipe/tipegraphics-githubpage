@@ -13,6 +13,7 @@ frm_submit.action = 'https://express-server-dmq0.onrender.com/send-review';
 
 const primary_nav = document.querySelector(".primary-navigation");
 const mobile_nav_toogle = document.querySelector(".mobile-nav-toogle");
+const y = document.querySelector(".mobile-text-animation"); 
 
 mobile_nav_toogle.addEventListener("click", () => {
 
@@ -22,11 +23,11 @@ mobile_nav_toogle.addEventListener("click", () => {
   if(visibility === "true"){
     primary_nav.setAttribute("data-visible", false)
     mobile_nav_toogle.setAttribute("aria-expanded", false)
-    //x.style.display = "none";
+    //y.style.display = "block";
   }else{
     primary_nav.setAttribute("data-visible",true);
     mobile_nav_toogle.setAttribute("aria-expanded", true)
-    //x.style.display = "block";
+    //y.style.display = "none";
   }
   
 })
@@ -64,7 +65,7 @@ const buttons = document.querySelectorAll(".btn_nav");
    setTimeout(carousel, 8000); // Change image every 2 seconds
  }
 
- //FORM VALIDATE
+//FORM VALIDATE
 function validateForm(event) {
   // Access the form and its elements
   var form = event.target;
@@ -75,6 +76,49 @@ function validateForm(event) {
   console.log("Elements", form.elements);
   console.log("FullName", fullname);
 }
+
+//TRACK ACTIVE LINK
+var links = document.querySelectorAll('.btn_nav');
+
+links.forEach(function(link) {
+  link.addEventListener('click', function() {
+    // Remove 'active' class from all links
+    links.forEach(function(innerLink) {
+      innerLink.classList.remove('active');
+    });
+
+    // Add 'active' class to the clicked link
+    link.classList.add('active');
+  });
+});
+
+//HORIZONAL SLIDE SHOW
+let currentSlide = 0;
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+  if (n >= slides.length) {
+    currentSlide = 0;
+  } else if (n < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = n;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[currentSlide].style.display = "block";
+}
+
+function changeSlide(n) {
+  showSlide(currentSlide + n);
+}
+
+// Initial setup
+showSlide(currentSlide);
+
 
 
 

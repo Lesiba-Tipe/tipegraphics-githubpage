@@ -16,6 +16,7 @@
     
     <link href="./style.css" type="text/css" rel="stylesheet" >
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script src="./ser_ver.js" defer ></script>
     <script src="./script.js" defer ></script>
@@ -37,7 +38,7 @@
         
         <ul id="primary-navigation" class="primary-navigation flex" data-visible="false" >
 
-          <li id="lstHome" class="nav-item"><a  class="btn_nav active" href="#home">Home</a></li>
+          <li id="lstHome" class="nav-item "><a  class="btn_nav " href="#home">Home</a></li>
           <li class="nav-item"><a class="btn_nav" href="#about">About us</a></li>
           <li class="nav-item"><a class="btn_nav" href="#potfolio">Potfolio</a></li>   
           <li class="nav-item"><a class="btn_nav" href="#service">Service</a></li>     
@@ -53,26 +54,28 @@
     <div id="home" class="frame">
 
 
-      <div id="text_animation" class="mobile-text-animation  col-lg-6">
-        <h4 class="mobile-text-slide w3-animate-fading " > 
-          <span>Graphic</span> <br class="line-break">
-          Design
-        </h4>
-
-        <h4 class="mobile-text-slide w3-animate-fading " >
-          <span>Web</span> <br> Design
-        </h4>
-
-        <h4 class="mobile-text-slide w3-animate-fading " >
-          <span>Web</span> <br> Development
-        </h4>
-
-      </div>
-
-      <div class="qoute">
-        <h4>Word of the Day</h4>
-        <img id="qoute_img" alt="Poet">
-        <p id="qoute_text"></p>
+      <div class="home row">
+        <div id="text_animation" class="mobile-text-animation  col-lg-6">
+          <h4 class="mobile-text-slide w3-animate-fading " > 
+            <span>Graphic</span> <br class="line-break">
+            Design
+          </h4>
+  
+          <h4 class="mobile-text-slide w3-animate-fading " >
+            <span>Web</span> <br> Design
+          </h4>
+  
+          <h4 class="mobile-text-slide w3-animate-fading " >
+            <span>Web</span> <br> Development
+          </h4>
+  
+        </div>
+  
+        <div class="quote d-flex flex-column justify-content-center col-lg-6">
+          <!-- <h4>Word of the Day</h4> -->
+          <img id="quote_img" alt="Poet">
+          <div class="d-flex justify-content-center"><p id="quote_text"></p></div>
+        </div>
       </div>
 
       <div class="btn-explore-group d-flex justify-content-center col-lg-6" >
@@ -84,13 +87,10 @@
           <img  src="./assets/development.jpg" alt="Pin">
         </div>
         
-        <div class="welcome-msg col-lg-5">
+        <div class="welcome-msg col-12 col-lg-5">
           <p>Do you have  bussiness or planning start a business but you dont know how to present it to your clients/customers/investors? Well... Here at Tipe Graphics we make sure you don't need to worry about the <span style="font-weight: bold;" >HOW</span>, We can brand your business.</p>
         </div>
       </div>
-
-      
-
 
       <div class="pin" >
         <img  src="./assets/icon-pin_1@72x.png" alt="Pin">
@@ -100,9 +100,9 @@
 
       <div class="row row-about">
 
-        <div class="about col-lg-5">
+        <div class="about col-12 col-lg-5">
           <p>
-            <span style="font-weight: bold;" >Established in 2021</span>, Tipe Graphics are graphic designers spcializing in Brand design, Web design and Web development. We focus on helping small bussiness owners to brand their bussiness, idividuals and social media influencers with their potfolio.
+            <span style="font-weight: bold;" >Established in 2021</span>, Tipe Graphics are graphic designers spcializing in Brand design, Web design and Web development. We focus on helping small bussiness owners to brand their bussiness, individuals and social media influencers with their potfolio.
           </p>
         </div>
 
@@ -117,7 +117,7 @@
       </div>
 
       <h4 id="potfolio" >Potfolio</h4>
-      <div class="potfolio flex flex-wrap justify-content-center ">
+      <div class="potfolio flex flex-wrap justify-content-center">
         <div class="potfolio-item grow "><img  class="" src="./assets/gallery/MegaWattAsset 12@72x.png" alt=""></div>
         <div class="potfolio-item grow"><img class="" src="./assets/gallery/Aero-Space.png" alt=""></div>
         <div class="potfolio-item grow"><img class="" src="./assets/gallery/agri-cropAsset 2@72x.png" alt=""></div>
@@ -180,7 +180,37 @@
 
       <h4 id="contacts" >Contact us</h4>
       <div id="div_submit_request" class="row">
+
+        <form id="frm_submit_request" class="col-12 col-lg-6 frm-review" method="post" onsubmit="validateForm(event)" >
+          <p>Fields marked with (*) are required.</p>
+          <input type="hidden" name="domain" value="tipegraphics.co.za">
+
+          <div class="form__group field">
+            <input type="text" class="form__field" name="fullname" id="fullname" required placeholder="Jane Doe"/>
+            <label for="name" class="form__label">Full Name*</label>
+          </div>
         
+          <div class="form__group field">
+            <input type="email" class="form__field" name="email" required placeholder="someone@company.co.za" id="email" />
+            <label for="name" class="form__label">Email <span>*</span> </label>
+          </div>
+
+          <div class="form__group field">
+            <input type="text" class="form__field" name="subject" id="subject" placeholder="Topic e.g [Quote, Complain, Suggestion, Review etc]" rows="4" cols="50" />
+            <label for="subject" class="form__label">Subject</label>
+          </div>
+
+          <div class="form__group field">
+            <textarea class="form__field" name="body" id="body" required placeholder="Full Description of your enquiry."></textarea>
+            <label for="body" class="form__label">Description*</label>
+          </div>
+        
+          <div class="row d-flex justify-content-center ">
+            <input value="Submit" type="submit" class="form-control btn btn-success " >   
+          </div>
+          <a href=""></a>
+        </form>
+
         <div class="contacts col-12 col-lg-6">
           <h6>Contacts</h6>
           <ul>        
@@ -197,35 +227,7 @@
           </ul>
         </div>
         
-        <form id="frm_submit_request" class="col-12 col-lg-6 frm-review" method="post" onsubmit="validateForm(event)" >
-            <p>Fields marks with (*) are required.</p>
-            <input type="hidden" name="domain" value="tipegraphics.co.za">
 
-            <div class="form__group field">
-              <input type="text" class="form__field" name="fullname" id="fullname" required placeholder="Jane Doe"/>
-              <label for="name" class="form__label">Full Name*</label>
-            </div>
-          
-            <div class="form__group field">
-              <input type="email" class="form__field" name="email" required placeholder="someone@company.co.za" id="email" />
-              <label for="name" class="form__label">Email*</label>
-            </div>
-  
-            <div class="form__group field">
-              <input type="text" class="form__field" name="subject" id="subject" placeholder="Topic e.g [Quote, Complain, Suggestion, Review etc]" rows="4" cols="50" />
-              <label for="subject" class="form__label">Subject</label>
-            </div>
-  
-            <div class="form__group field">
-              <textarea class="form__field" name="body" id="body" required placeholder="Full Description of your enquiry."></textarea>
-              <label for="body" class="form__label">Description*</label>
-            </div>
-          
-            <div class="row d-flex justify-content-center ">
-              <input value="Submit" type="submit" class="form-control btn btn-success " >   
-            </div>
-            <a href=""></a>
-          </form>
       </div>
       <!-- END OF FRAME -->
     </div>

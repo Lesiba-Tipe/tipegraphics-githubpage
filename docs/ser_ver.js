@@ -1,17 +1,53 @@
-console.log("Testing");
-path = 'http://localhost:3000/data'
-//path = './shared/data.json'     //Development path
+console.log("Ser_ver");
+//path = 'http://localhost:3000/quotes'
+path = './data/database.json'     //Development path
 fetch(path)
   .then(response => response.json())
   .then(data => {
-    link = 'https://drive.google.com/uc?id=';
+    
+    const quotes = data  //list of quotes
+    //console.log("Test: ",quotes)
+    //console.log("\nQuote: ",quotes[0].quote)
 
-    let quotes = data.quotes  //list of quotes
+    var quote_img = document.getElementById('quote_img');
+    var quote_txt = document.getElementById('quote_text');
 
-    const quote_img = document.getElementById('quote_img');
-    const quote_txt = document.getElementById('quote_txt');
 
-    quote_txt.textContent = quotes[0].quote
+    
+    //Delay
+    var midnight = "13:01:00";
+    //var midnight = "0:00:00";
+    var now = null;
+
+    var index = 0
+    var quote = quotes[index]
+
+    setInterval(function () {
+      now = moment().format("H:mm:ss");
+      
+      //console.log('Objects:',quote)
+
+      if(index === 0){  //Default
+        quote_txt.innerHTML = '"' + quote.quote + '"<span style="color:#50FA7B; font-style: italic"> ~' +quote.author+'</span>'
+        quote_img.setAttribute('src', quote.image);
+      }
+
+      if(now === midnight) {
+        
+        if(index < quotes.length){
+          index++       
+          //var index = Math.floor(Math.random() * quotes.length)         
+          quote_txt.innerHTML = '"' + quote.quote + '"<span style="color:#50FA7B; font-style: italic"> ~'+quote.author+'</span>'
+
+          quote_img.setAttribute('src', quote.image);
+
+        }else{
+          index = 0;
+          console.log('Index: ',index)
+          index++
+        }
+      }
+    }, 1000)
       
   })
   .catch(error => {

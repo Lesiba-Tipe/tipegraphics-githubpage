@@ -25,6 +25,8 @@ body{
   /* height: 100%; */
   padding-top: 5em;
   background-color: #282a366e;
+
+
 }
 
 .btn-float{
@@ -64,7 +66,7 @@ body{
   justify-content: space-between;
 
   border-bottom: 1px solid #F8F8F2;
-  padding: .6rem 3rem;
+  /* padding: .6rem 3rem; */
   
   position: fixed;
   top: 0;
@@ -78,20 +80,20 @@ body{
   width: 2.5em;
 }
 
-.primary-navigation{ list-style: none;  }
-a{ text-decoration: none; }
-
 /* Primary Navigation */ 
 .primary-navigation{
-flex-direction: row;
-gap: 2.5rem; 
-padding: 0;
-margin: 0;
+  list-style: none;
+  flex-direction: row;
+  gap: 2.5rem; 
+  padding: 0;
+  margin: 0;
+  
+}
 
-}
-.primary-navigation a {
+a{
   color: #F8F8F2;
-}
+   text-decoration: none; 
+  }
 .mobile-nav-toogle {
   display: none;
 }
@@ -99,6 +101,7 @@ margin: 0;
   display: flex;
   justify-content: center;
   text-align: left;
+  z-index: 0;
 }
 .mobile-text-slide span{
   font-weight: bold;
@@ -168,18 +171,17 @@ footer{
   }
 }
 
-
-
-
-
 /*
   MOBILE
 */
 @media (max-width: 35em){
 
+  .primary-header{
+    padding: .5rem .7rem;
+  }
 
   .primary-navigation{
-    z-index: 1000;
+
     flex-direction: column; 
     gap: 1.5em;
     padding: min(20vh, 10rem) 0;
@@ -191,17 +193,16 @@ footer{
     transform: translateX(100%);
     transition: transform 350ms ease-in;
 
-    
-    background-color: hsl(135, 94%, 65%);
+    z-index: 100;
+    background-color: hsl(231, 15%, 18%);
     /* backdrop-filter: blur(.09rem); */
-  }
 
-  .primary-navigation li {
+    li {
     
-    background-color: #2e2e2e;
-    padding: .5em 0;
+      background-color: #2e2e2e;
+      padding: .5em 0;
+    }
   }
-
   .primary-navigation[data-visible="true"]{ 
     transform: translateX(0%);
   }
@@ -216,7 +217,7 @@ footer{
     width: 2.2rem;
     border: 0;
     aspect-ratio: 1;
-    right: 1rem;
+    right: .7em;
     position: absolute;
     /* top: 1rem;*/
   }
@@ -226,6 +227,46 @@ footer{
     /* background-color: red; */
   }
 
+  .frame{
+    #quote_img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      border: 2px solid #F8F8F2;
+      border-radius: 100%;
+    }
+  
+    #quote_text{
+      text-align: center;
+      width: 90%;
+    }
+
+      /* 
+    ABOUT
+  */
+  .img-about {
+    display: flex;
+    justify-content: center;
+    img{
+      width: 90%;
+    }
+  }
+
+  .potfolio{
+    .potfolio-item{  
+     
+      display: flex;
+      justify-content: center;   
+      padding: .8em; 
+      background-color: #f8f8f2;
+      img{
+        width: 20rem;
+      }
+    }
+  }
+
+  }
   #text_animation{
     z-index: 0;
     margin-top: 3em;
@@ -240,9 +281,17 @@ footer{
     background-color: transparent;
     color: #50FA7B;
   }
+
   .welcome-msg{
+    width: 90%;
     margin-top: 3em;
+    margin-left: 1rem;
+    padding: 0px;
+    p{
+      text-align: center;
+    }
   }
+  
   .btn-explore-group a:hover{
     color: #50FA7B;
     border: 2px solid #50FA7B;
@@ -253,6 +302,7 @@ footer{
     font-size: 2.5em;
     color: #50FA7B;
   }
+
 
   .service{
     margin-left: 1.5em;
@@ -312,6 +362,13 @@ footer{
     box-shadow: none;
   }
 
+  .contacts h6{
+    text-align: center;
+  }
+  .contacts ul li{
+    display: flex;
+    justify-content: center;
+  }
 }
 /* 
 ------------------------------------------------------
@@ -328,13 +385,57 @@ DESKTOP
     display: block;
   }
 
-  /* H E A D E R */
+  /* H E A D E R */ 
+  .primary-header{
+    z-index: 50;
+    padding: .6rem 3rem;
+    nav{
+      ul{
+
+
+        li{
+          .active{
+            color: #50FA7B;
+            border-bottom: 2px solid #50FA7B;;
+          }
+
+          a{
+            padding: 0px 5px;
+            transition: border-bottom 0.7s ease-in;
+            /* transition-duration: 0.2s;  */
+          }
+          a:hover{
+            color: #50FA7B;
+            border-bottom: 2px solid #50FA7B;;
+          }
+        }
+      }
+    }
+  }
+
 
   /* H O M E */
   .frame{
+
     padding-left: 3em;
     padding-right: 3em;
 
+    .home{
+        #quote_img{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 40%;
+          border: 3px solid #F8F8F2;
+          border-radius: 100%;
+        }
+
+        #quote_text{
+          text-align: center;
+          width: 50%;
+        }
+      
+    }
     .mobile-text-animation{
       margin-top: 5em;
       h4{
@@ -346,7 +447,7 @@ DESKTOP
     }
 
     .btn-explore-group{
-      margin-top: 5em;
+      margin-top: 0px;
       .btn{
         color: #F8F8F2;
         border: 2px solid #F8F8F2;

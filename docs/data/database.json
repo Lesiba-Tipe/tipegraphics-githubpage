@@ -7,43 +7,46 @@
         },
         {
             "author":"Serena Williams ",
-            "image":"",
+            "image":"./assets/quotes/Serina-Williams.png",
             "quote":"You have to believe in yourself when no one else does."
         },
         {
             "author":"Mother Teresa",
-            "image":"",
+            "image":"./assets/quotes/Mother-Teresa.png",
             "quote":"Spread love everywhere you go. Let no one ever come without leaving happier."
         },
         {
             "author":"Oprah Winfrey",
-            "image":"",
+            "image":"./assets/quotes/oprah-small.png",
             "quote":"Failure is a great teacher and, if you are open to it, every mistake has a lesson to offer"
         },
         {
             "author":"Nelson Mandela",
-            "image":"",
+            "image":"./assets/quotes/Mandela.jpg",
             "quote":"It always seems impossible until it's done."
         },
         {
             "author":"Bob Marley",
-            "image":"",
+            "image":"./assets/quotes/Bob-Marley.png",
             "quote":"Love the life you live. Live the life you lover"
         },
         {
             "author":"Oprah Winfrey",
-            "image":"",
+            "image":"./assets/quotes/oprah-small.png",
             "quote":"You define your own life. Don’t let other people write your script."
         },
         {
             "author":"Albert Einstein",
-            "image":"",
+            "image":"./assets/quotes/Albert-Einstein.png",
             "quote":"Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning."
         },
         {
             "author":"Albert Einstein",
-            "image":"",
+            "image":"./assets/quotes/Albert-Einstein.png",
             "quote":"The only source of knowledge is experience."
         }
-    ]
+    ],
+    "developer":{
+        "name":"Tipe Graphics"
+    }
 }
