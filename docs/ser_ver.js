@@ -5,7 +5,8 @@ fetch(path)
   .then(response => response.json())
   .then(data => {
     
-    const quotes = data  //list of quotes
+    const quotes = data.quotes //list of quotes //Development
+    //const quotes = data  //list of quotes //Local
     //console.log("Test: ",quotes)
     //console.log("\nQuote: ",quotes[0].quote)
 
