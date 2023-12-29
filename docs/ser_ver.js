@@ -7,8 +7,8 @@ fetch(path)
     
     const quotes = data.quotes //list of quotes //Development
     //const quotes = data  //list of quotes //Local
-    //console.log("Test: ",quotes)
-    //console.log("\nQuote: ",quotes[0].quote)
+    console.log("Quotes: ",quotes)
+    console.log("\nQuotes[0].quote: ",quotes[0].quote)
 
     var quote_img = document.getElementById('quote_img');
     var quote_txt = document.getElementById('quote_text');
@@ -22,7 +22,7 @@ fetch(path)
 
     var index = 0
     var quote = quotes[index]
-
+  
     setInterval(function () {
       now = moment().format("H:mm:ss");
       
