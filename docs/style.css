@@ -675,7 +675,8 @@ https://bootstrap-menu.com/detail-autohide.html
     display: inline-block;
     width: 5rem;
   }
-  .grow {
+
+  .grows {
     transition: all 0.2s ease-in-out;
   
   }

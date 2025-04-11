@@ -96,7 +96,7 @@ links.forEach(function(link) {
 let currentSlide = 0;
 
 function showSlide(n) {
-  const slides = document.getElementsByClassName("slide");
+  var slides = document.getElementsByClassName("slide");
   if (n >= slides.length) {
     currentSlide = 0;
   } else if (n < 0) {
